@@ -116,7 +116,8 @@ Ensure you have **Node.js** and **npm** (Node Package Manager) installed. You ca
 
 ## License
 
-This project is licensed under [Abdulrhman Al Shalal](www.abdulrhman-alshalal.com).
+This project is licensed under the [MIT License](LICENSE) © [Abdulrhman Al Shalal](https://www.abdulrhman-alshalal.com).
+
 
 ---
 
