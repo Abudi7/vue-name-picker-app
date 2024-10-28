@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link to the main stylesheet -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- Preconnect to improve performance for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts: Almarai font family -->
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+
+  <!-- Link to Animate.css library for animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Vue.js library -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <title>Vue Course</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- <p>{{ greetings }}</p>
+    <p>{{ message() }}</p>
+    <h1>The Count Value now: {{ count }}</h1>
+    <p>Last Updated: {{ date }}</p> -->
+    <!-- Input and List Container - Visible only when state is true -->
+    <div id="names" class="container" v-if="data.state">
+      <div class="logo">
+        <h1>Who Pays the Bill</h1>
+      </div>
+
+      <!-- Input field and Add button for entering names -->
+      <div class="input_container">
+        <input type="text" v-model.trim="data.inputNam" placeholder="Enter a name" @keyup.enter="addNameToList">
+        <button @click="addNameToList">Add</button>
+      </div>
+
+      <!-- Display error message if any error occurs -->
+      <p v-if="data.showError" class="error animate__animated animate__fadeDown">{{ data.error }}</p>
+
+      <!-- Display list of names with option to remove each -->
+      <div class="list_of_names">
+        <div v-for="(name, index) in data.names" :key="index" class="animate__animated animate__fadeIn" @click="removeName(index)">
+          {{ name }}
+        </div>
+      </div>
+
+      <!-- Show 'Check the Looser' button only if there are enough names -->
+      <div v-if="isReady" class="animate__animated animate__bounceIn">
+        <div class="action_button" @click="showResults">Check the Looser</div>
+      </div>
+    </div>
+
+    <!-- Results Container - Visible only when state is false -->
+    <div id="results" class="container" v-if="!data.state">
+      <h2>Result: {{ data.result }}</h2>
+      <div class="action_buttons">
+        <button @click="startOver" class="button start-over">Start Over</button>
+        <button @click="chooseAgain" class="button choose-again">Choose Again</button>
+      </div>
+    </div>    
+  </div>
+
+  <!-- Link to main JavaScript file -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>

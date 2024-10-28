@@ -1,0 +1,247 @@
+/* CSS Style Map for the Application */
+/* Author: Abdulrhman Al Shalal */
+/* Reset default styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Almarai", sans-serif;
+  font-weight: 600;
+}
+
+/* Body styling */
+body {
+  font-family: 'Almarai', sans-serif;
+  background: linear-gradient(135deg, #e0effe, #e6f3ff, #f7fbff);
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Container styling */
+.container {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+  padding: 40px 30px;
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Logo styling */
+.logo h1 {
+  font-size: 2.5rem;
+  color: #4A90E2;
+  margin-bottom: 30px;
+  font-weight: 800;
+  animation: slideUp 0.5s ease;
+}
+
+/* Input field styling */
+.input_container {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.input_container input[type="text"] {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  animation: slideUp 0.5s ease;
+}
+
+.input_container input[type="text"]:focus {
+  border-color: #4A90E2;
+  box-shadow: 0px 0px 8px rgba(74, 144, 226, 0.3);
+}
+
+/* Primary button styling */
+.input_container button,
+.action_button {
+  background: linear-gradient(135deg, #4A90E2, #3c82c1);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  animation: slideUp 0.6s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.input_container button:hover,
+.action_button:hover {
+  background: linear-gradient(135deg, #3c82c1, #2e6da1);
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Additional Action Buttons */
+.action_buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.start-over,
+.choose-again {
+  background: #e74c3c;
+}
+
+.start-over:hover {
+  background-color: #c0392b;
+}
+
+.choose-again {
+  background: linear-gradient(135deg, #4a90e2, #3c82c1);
+}
+
+.choose-again:hover {
+  background: linear-gradient(135deg, #3c82c1, #2e6da1);
+}
+
+/* List of names styling */
+.list_of_names {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.list_of_names div {
+  background-color: #F1F9FF;
+  color: #333;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  animation: fadeIn 0.3s ease;
+}
+
+.list_of_names div:hover {
+  transform: translateY(-3px);
+  background-color: #E2F3FF;
+}
+
+/* Error message styling */
+.error {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+/* Main container styling */
+.container {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+  padding: 40px 30px;
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+/* "Check the Looser" button styling */
+.action_button {
+  display: inline-block;
+  background: linear-gradient(135deg, #4A90E2, #3c82c1);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  animation: slideUp 0.6s ease;
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.action_button:hover {
+  background: linear-gradient(135deg, #3c82c1, #2e6da1);
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Results container button styles */
+.action_buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.button {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* "Start Over" button */
+.start-over {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.start-over:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* "Choose Again" button */
+.choose-again {
+  background: linear-gradient(135deg, #4A90E2, #3c82c1);
+  color: #fff;
+}
+
+.choose-again:hover {
+  background: linear-gradient(135deg, #3c82c1, #2e6da1);
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
+}
